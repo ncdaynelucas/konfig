@@ -360,10 +360,10 @@ func parseReference(s string) (*Reference, error) {
 	}
 
 	r := &Reference{
-		Cluster:   strings.Join(ss[0:7], "/"),
-		Namespace: ss[8],
-		Name:      ss[10],
-		Key:       ss[12],
+		Cluster:   strings.Join(ss[0:5], "/"),
+		Namespace: ss[7],
+		Name:      ss[9],
+		Key:       ss[11],
 		Kind:      kind,
 		TempFile:  tempFile,
 	}
